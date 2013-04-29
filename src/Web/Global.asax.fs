@@ -18,10 +18,10 @@ type public AppHost() =
     inherit AppHostBase("App", typedefof<AppHost>.Assembly)
 
     override this.Configure(container : Funq.Container) =
-        ServiceStack.Text.JsConfig.EmitCamelCaseNames = true |> ignore
+        ServiceStack.Text.JsConfig.EmitCamelCaseNames <- true
         
         this.SetConfig(new EndpointHostConfig(ServiceStackHandlerFactoryPath = "api", EnableFeatures = Feature.All.Remove(Feature.Metadata)))
-        
+
         this.ConfigureAuth(container)
 
     member this.ConfigureAuth(container : Funq.Container) =
