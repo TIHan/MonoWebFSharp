@@ -1,0 +1,86 @@
+﻿<div>
+	<h1>Home</h1>
+	<h2>Welcome <span data-bind="text: displayName"></span>!</h2>
+	<button data-bind="click: logout">Logout</button>
+	
+	<dl class="dl-horizontal">
+		<dt>Test Get:</dt>
+		<dd>
+			<div data-bind="with: testGetResponse">
+				<p data-bind="text: message"></p>
+				<p data-bind="text: timestamp.format('h:mm A')"></p>
+			</div>
+		</dd>
+		
+		<dt>Test Message Get:</dt>
+		<dd>
+			<div data-bind="with: testMessageGetResponse">
+				<p data-bind="text: message"></p>
+				<p data-bind="text: timestamp.format('h:mm A')"></p>
+			</div>
+		</dd>
+		
+		<dt>Test Query:</dt>
+		<dd>
+			<div data-bind="with: testQueryGetResponse">
+				<p data-bind="text: message"></p>
+				<p data-bind="text: timestamp.format('h:mm A')"></p>
+			</div>
+		</dd>
+		
+		<dt>Test List:</dt>
+		<dd>
+			<div data-bind="foreach: testListGetResponse">
+				<p data-bind="text: message"></p>
+			</div>
+		</dd>
+		
+		<dt>Test Post:</dt>
+		<dd>
+			<div data-bind="with: testPostResponse">
+				<p data-bind="text: message"></p>
+				<p data-bind="text: timestamp.format('h:mm A')"></p>
+			</div>
+		</dd>
+		
+		<dt>Test Message Post:</dt>
+		<dd>
+			<div data-bind="with: testMessagePostResponse">
+				<p data-bind="text: message"></p>
+				<p data-bind="text: timestamp.format('h:mm A')"></p>
+			</div>
+		</dd>
+		
+		<dt>Test Put:</dt>
+		<dd>
+			<div data-bind="with: testPutResponse">
+				<p data-bind="text: message"></p>
+				<p data-bind="text: timestamp.format('h:mm A')"></p>
+			</div>
+		</dd>
+		
+		<dt>Test Message Put:</dt>
+		<dd>
+			<div data-bind="with: testMessagePutResponse">
+				<p data-bind="text: message"></p>
+				<p data-bind="text: timestamp.format('h:mm A')"></p>
+			</div>
+		</dd>
+		
+		<dt>Test Delete:</dt>
+		<dd>
+			<div data-bind="with: testDeleteResponse">
+				<p data-bind="text: message"></p>
+				<p data-bind="text: timestamp.format('h:mm A')"></p>
+			</div>
+		</dd>
+		
+		<dt>Test Message Delete:</dt>
+		<dd>
+			<div data-bind="with: testMessageDeleteResponse">
+				<p data-bind="text: message"></p>
+				<p data-bind="text: timestamp.format('h:mm A')"></p>
+			</div>
+		</dd>
+	</dl>
+</div>
