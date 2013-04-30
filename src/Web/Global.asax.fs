@@ -25,12 +25,11 @@ type public AppHost() =
         this.ConfigureAuth(container)
 
     member this.ConfigureAuth(container : Funq.Container) =
-        let authSession : IAuthSession = new AuthUserSession() :> IAuthSession
         let authProviders : IAuthProvider[] = [|new CredentialsAuthProvider()|]
-        this.Plugins.Add(new AuthFeature((fun () -> authSession), authProviders))
+        this.Plugins.Add(new AuthFeature(null, authProviders))
 
         container.Register<ICacheClient>(new MemoryCacheClient())
-        let userRep = new InMemoryAuthRepository ()
+        let userRep = new InMemoryAuthRepository()
         container.Register<IUserAuthRepository>(userRep)
 
 #if DEBUG
