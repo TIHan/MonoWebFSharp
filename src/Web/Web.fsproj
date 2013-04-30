@@ -10,6 +10,13 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Web</RootNamespace>
     <AssemblyName>Web</AssemblyName>
+    <BuildOrder>
+      <BuildOrder>
+        <String>App.fs</String>
+        <String>Services.fs</String>
+        <String>Global.asax.fs</String>
+      </BuildOrder>
+    </BuildOrder>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -120,5 +127,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Services.fs" />
+    <Compile Include="App.fs" />
   </ItemGroup>
 </Project>
