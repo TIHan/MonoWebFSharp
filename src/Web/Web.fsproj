@@ -66,6 +66,7 @@
       <HintPath>..\..\lib\FSharp.Core.dll</HintPath>
     </Reference>
   </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.FSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <ProjectExtensions>
     <MonoDevelop>
