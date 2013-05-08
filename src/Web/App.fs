@@ -37,7 +37,7 @@ type public AppHost() =
 #endif
         
 
-    member this.CreateUser(userRep, id, userName, email, password, roles, permissions) =
+    member this.CreateUser(userRep : IUserAuthRepository, id, userName, email, password, roles, permissions) =
         let mutable hash = ""
         let mutable salt = ""
         let saltedHash = new SaltedHash()
